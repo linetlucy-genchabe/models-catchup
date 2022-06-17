@@ -21,7 +21,6 @@ class Album(models.Model):
     artist = models.CharField(max_length = 100)
     
         
-
 class Song(models.Model):
     title = models.CharField(max_length = 100)
     album = models.ForeignKey(Album, on_delete = models.CASCADE)
@@ -29,4 +28,6 @@ class Song(models.Model):
     favorite_artist = models.OneToOneField(Favorite_artist,on_delete= models.CASCADE)
         
 	
-    
+    # pub_date = models.DateTimeField(auto_now_add=True)
+    # image = models.ImageField(upload_to = 'articles/',blank=True)
+
